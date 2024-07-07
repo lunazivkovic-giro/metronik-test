@@ -1,0 +1,30 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-title class="center">Login</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" [(ngModel)]="email" name="email" required>
+            <mat-error *ngIf="loginForm.submitted && !loginForm.controls['email']?.valid">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="password" name="password" required>
+            <mat-error *ngIf="loginForm.submitted && !loginForm.controls['password']?.valid">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+    
+          <div class="center">
+            <button mat-raised-button color="primary" class="black-button" type="submit">Login</button>
+          </div>
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

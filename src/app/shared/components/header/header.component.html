@@ -1,0 +1,10 @@
+<mat-toolbar class="custom-toolbar">
+  <span class="app-name">Order Management Station</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="settings-button" *ngIf="isAuthenticated()">
+    <mat-icon class="custom-icon">settings</mat-icon>
+  </button>
+  <button mat-icon-button class="auth-button" (click)="isAuthenticated() ? logout() : login()">
+    <mat-icon class="custom-icon">{{ isAuthenticated() ? 'logout' : 'login' }}</mat-icon>
+  </button>
+</mat-toolbar>

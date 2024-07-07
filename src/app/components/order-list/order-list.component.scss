@@ -1,0 +1,31 @@
+.container {
+  padding: 40px;
+  margin-top: 90px
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.no-data {
+  text-align: center;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+.button-add {
+  background-color: rgb(5, 97, 189) !important;
+  color: white !important;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif !important;
+}
+
+.button-edit {
+  background-color: rgb(216, 216, 216);
+  border: 2px solid rgb(122, 188, 255);
+  color: rgb(0, 0, 0);
+}

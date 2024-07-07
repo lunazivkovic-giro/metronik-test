@@ -1,0 +1,295 @@
+{
+  "orders": [
+    {
+      "omsId": "0645848",
+      "expectedCompletionTime": "2024-07-07T10:00:00Z",
+      "orderId": "05f52b01-ba4b-4dc7-a94a-7846db44ac63",
+      "products": [
+        {
+          "gtin": "01334567894339",
+          "quantity": 3,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "XT6c84e",
+            "2kY39Om",
+            "X4ebssJ"
+          ],
+          "templateId": "3"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "123456",
+        "factoryCountry": "Country A",
+        "productionLineId": "Line1",
+        "productCode": "PCODE1",
+        "productDescription": "Product Description 1"
+      }
+    },
+    {
+      "omsId": "0645849",
+      "expectedCompletionTime": "2024-07-08T11:00:00Z",
+      "orderId": "16e52b01-ba4b-4dc7-a94a-7846db44ac64",
+      "products": [
+        {
+          "gtin": "02334567894340",
+          "quantity": 5,
+          "serialNumberType": "SYSTEM_GENERATED",
+          "templateId": "4"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "654321",
+        "factoryCountry": "Country B",
+        "productionLineId": "Line2",
+        "productCode": "PCODE2",
+        "productDescription": "Product Description 2"
+      }
+    },
+    {
+      "omsId": "0645850",
+      "expectedCompletionTime": "2024-07-09T12:00:00Z",
+      "orderId": "8cd8bb08-b5c0-4f12-8f6d-6cf515d4f140",
+      "products": [
+        {
+          "gtin": "03334567894341",
+          "quantity": 2,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "12345",
+            "67890"
+          ],
+          "templateId": "5"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "789012",
+        "factoryCountry": "Country C",
+        "productionLineId": "Line3",
+        "productCode": "PCODE3",
+        "productDescription": "Product Description 3"
+      }
+    },
+    {
+      "omsId": "0645851",
+      "expectedCompletionTime": "2024-07-10T13:00:00Z",
+      "orderId": "82e8b19a-5504-4438-97b1-1dfc9cc20e81",
+      "products": [
+        {
+          "gtin": "04334567894342",
+          "quantity": 4,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "ABCDE",
+            "FGHIJ"
+          ],
+          "templateId": "6"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "321098",
+        "factoryCountry": "Country D",
+        "productionLineId": "Line4",
+        "productCode": "PCODE4",
+        "productDescription": "Product Description 4"
+      }
+    },
+    {
+      "omsId": "0645852",
+      "expectedCompletionTime": "2024-07-11T14:00:00Z",
+      "orderId": "e9d8f00c-5c1a-4e82-b76f-5fcd8e91fafe",
+      "products": [
+        {
+          "gtin": "05334567894343",
+          "quantity": 6,
+          "serialNumberType": "SYSTEM_GENERATED",
+          "templateId": "7"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "567890",
+        "factoryCountry": "Country E",
+        "productionLineId": "Line5",
+        "productCode": "PCODE5",
+        "productDescription": "Product Description 5"
+      }
+    },
+    {
+      "omsId": "0645853",
+      "expectedCompletionTime": "2024-07-12T15:00:00Z",
+      "orderId": "d7f3b8e3-6e77-4531-bb5e-90845d2d3c95",
+      "products": [
+        {
+          "gtin": "06334567894344",
+          "quantity": 3,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "LMNOP",
+            "QRSTU"
+          ],
+          "templateId": "8"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "234567",
+        "factoryCountry": "Country F",
+        "productionLineId": "Line6",
+        "productCode": "PCODE6",
+        "productDescription": "Product Description 6"
+      }
+    },
+    {
+      "omsId": "0645854",
+      "expectedCompletionTime": "2024-07-13T16:00:00Z",
+      "orderId": "9d4f3e28-f91a-4d0a-9c25-2d9c9c3f3c5d",
+      "products": [
+        {
+          "gtin": "07334567894345",
+          "quantity": 5,
+          "serialNumberType": "SYSTEM_GENERATED",
+          "templateId": "9"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "890123",
+        "factoryCountry": "Country G",
+        "productionLineId": "Line7",
+        "productCode": "PCODE7",
+        "productDescription": "Product Description 7"
+      }
+    },
+    {
+      "omsId": "0645855",
+      "expectedCompletionTime": "2024-07-14T17:00:00Z",
+      "orderId": "b8f3a6b2-d6a7-4ea8-9a1b-8f9b8d7f8e7e",
+      "products": [
+        {
+          "gtin": "08334567894346",
+          "quantity": 2,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "VWXYZ",
+            "12345"
+          ],
+          "templateId": "10"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "456789",
+        "factoryCountry": "Country H",
+        "productionLineId": "Line8",
+        "productCode": "PCODE8",
+        "productDescription": "Product Description 8"
+      }
+    },
+    {
+      "omsId": "0645856",
+      "expectedCompletionTime": "2024-07-15T18:00:00Z",
+      "orderId": "c7e3d6a5-f4a2-48e8-b2d6-7a9b8d8e7e8f",
+      "products": [
+        {
+          "gtin": "09334567894347",
+          "quantity": 4,
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            "67890",
+            "ABCDE"
+          ],
+          "templateId": "11"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "345678",
+        "factoryCountry": "Country I",
+        "productionLineId": "Line9",
+        "productCode": "PCODE9",
+        "productDescription": "Product Description 9"
+      }
+    },
+    {
+      "omsId": "0645857",
+      "expectedCompletionTime": "2024-07-16T19:00:00Z",
+      "orderId": "d6a3b8c2-f6b7-48e8-a3a8-8a9b8d9e8e9f",
+      "products": [
+        {
+          "gtin": "10334567894348",
+          "quantity": 6,
+          "serialNumberType": "SYSTEM_GENERATED",
+          "templateId": "12"
+        }
+      ],
+      "orderDetails": {
+        "factoryId": "789012",
+        "factoryCountry": "Country J",
+        "productionLineId": "Line10",
+        "productCode": "PCODE10",
+        "productDescription": "Product Description 10"
+      }
+    },
+    {
+      "id": "",
+      "orderId": "bf476f6c-d3b6-41a9-9c90-f4f91da8f32f",
+      "expectedCompletionTime": 5589,
+      "omsId": "t54terg555545555",
+      "orderDetails": {
+        "factoryId": "",
+        "factoryName": "",
+        "factoryAddress": "",
+        "factoryCountry": "",
+        "productionLineId": "",
+        "productCode": "",
+        "productDescription": "",
+        "poNumber": "",
+        "expectedStartDate": ""
+      },
+      "products": [
+        {
+          "gtin": "11111111111123",
+          "quantity": "45",
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            {
+              "serialNumber": "123"
+            },
+            {
+              "serialNumber": "1234"
+            }
+          ],
+          "templateId": "234"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "orderId": "4c130751-0404-4548-9fb3-1b0cf9eda266",
+      "expectedCompletionTime": 8307,
+      "omsId": "123",
+      "orderDetails": {
+        "factoryId": "",
+        "factoryName": "",
+        "factoryAddress": "",
+        "factoryCountry": "",
+        "productionLineId": "",
+        "productCode": "",
+        "productDescription": "",
+        "poNumber": "",
+        "expectedStartDate": ""
+      },
+      "products": [
+        {
+          "gtin": "12345678912345",
+          "quantity": "34",
+          "serialNumberType": "SELF_MADE",
+          "serialNumbers": [
+            {
+              "serialNumber": "123"
+            },
+            {
+              "serialNumber": "1234"
+            }
+          ],
+          "templateId": "344"
+        }
+      ]
+    }
+  ]
+}

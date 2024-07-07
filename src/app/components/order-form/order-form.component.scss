@@ -1,0 +1,134 @@
+.order-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+  }
+  
+  mat-card {
+    width: 80%;
+    max-width: 600px;
+    height: 90vh;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+  }
+  
+  mat-card-content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .product-group {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product-header h6 {
+    margin: 0;
+  }
+  
+  .serial-number-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .serial-number-group mat-form-field {
+    flex: 1;
+  }
+  
+  .serial-number-group button {
+    margin-left: 10px;
+  }
+  
+  .button-group-left {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  .rounded-input .mat-form-field-wrapper {
+    border-radius: 8px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+    button {
+      margin: 5px;
+      border-radius: 8px;
+    }
+  }
+  
+  .save-button {
+    background-color: #000;
+    color: #fff;
+    width: 150px; 
+  }
+  
+  .invalid .mat-form-field-underline {
+    background-color: red !important;
+  }
+  
+  .invalid .mat-form-field-ripple {
+    background-color: red !important;
+  }
+  
+  .invalid .mat-input-element {
+    border-color: red !important;
+  }
+  
+  .error-message {
+    color: red;      
+    font-size: 0.8rem; 
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .order-form-container {
+    position: relative;
+  }
+  
+  .close-button-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  

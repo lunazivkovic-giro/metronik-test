@@ -1,0 +1,27 @@
+.custom-toolbar {
+  background-color: lightblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.custom-icon {
+  color: white;
+}

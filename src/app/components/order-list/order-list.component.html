@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<div *ngIf="!isLoading && !errorMessage" class="container">
+  <div class="header">
+    <button mat-raised-button class="button-add" (click)="addNewProduct()">Add New Product</button>
+  </div>
+  <div *ngIf="orders.length === 0" class="no-data">No data available.</div>
+  <table *ngIf="orders.length > 0" mat-table [dataSource]="orders" class="mat-elevation-z8">
+    <ng-container matColumnDef="omsId">
+      <th mat-header-cell *matHeaderCellDef> imsId </th>
+      <td mat-cell *matCellDef="let order"> {{order.omsId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="expectedCompletionTime">
+      <th mat-header-cell *matHeaderCellDef> Expected Completion Time </th>
+      <td mat-cell *matCellDef="let order"> {{order.expectedCompletionTime}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="orderId">
+      <th mat-header-cell *matHeaderCellDef> OrderId </th>
+      <td mat-cell *matCellDef="let order"> {{order.orderId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let order">
+        <button mat-button class="button-edit" (click)="editOrder(order)">Edit</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
