@@ -46,10 +46,8 @@ app.get('/api/orders/:id', (req, res) => {
     return res.status(500).json({ error: 'Database not loaded' });
   }
 
-  console.log(req.params.id)
   const order = database.orders.find(order => order.orderId === req.params.id);
   
-  console.log(order)
   if (!order) {
     return res.status(404).json({ error: 'Order not found' });
   }

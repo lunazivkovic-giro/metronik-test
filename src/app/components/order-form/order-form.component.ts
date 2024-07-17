@@ -47,7 +47,6 @@ export class OrderFormComponent implements OnInit {
     if (this.orderId) {
       this.isLoading = true;
       this.orderService.getOrderById(this.orderId).subscribe(order => {
-        console.log(order)
         this.populateForm(order);
         this.isLoading = false;
       }, error => {
@@ -91,11 +90,11 @@ export class OrderFormComponent implements OnInit {
     return this.fb.group({
       gtin: [product ? product.gtin : '', { validators: [Validators.required, Validators.minLength(14), Validators.maxLength(14)], updateOn: 'submit' }],
       quantity: [product ? product.quantity : '', { validators: [Validators.required, Validators.pattern('^[0-9]+$')], updateOn: 'submit' }],
-      serialNumberType: [product ? product.serialNumberType : '', { validators: [Validators.required]}],
+      serialNumberType: [product ? product.serialNumberType : '', { validators: [Validators.required] }],
       serialNumbers: this.fb.array(
-        product ? product.serialNumbers.map((sn: any) => this.fb.group({ serialNumber: [sn.serialNumber, [Validators.required]] }))
-                : [],
-        { validators: [uniqueSerialNumbersValidator]}
+        product ? product.serialNumbers?.map((sn: any) => this.fb.group({ serialNumber: [sn.serialNumber, [Validators.required]] }))
+          : [],
+        { validators: [uniqueSerialNumbersValidator] }
       ),
       templateId: [product ? product.templateId : '', { validators: [Validators.required], updateOn: 'submit' }]
     });
@@ -115,7 +114,7 @@ export class OrderFormComponent implements OnInit {
 
     if (serialNumberType === 'SELF_MADE') {
       if (serialNumbers.length === 0) {
-        serialNumbers.push(this.fb.group({ serialNumber: ['',  [Validators.required]] }));
+        serialNumbers.push(this.fb.group({ serialNumber: ['', [Validators.required]] }));
       }
     } else {
       while (serialNumbers.length !== 0) {
@@ -173,7 +172,7 @@ export class OrderFormComponent implements OnInit {
 
   generateOrderId() {
     this.orderForm?.get('orderId')?.setValue(
-      'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
       })
@@ -190,7 +189,6 @@ export class OrderFormComponent implements OnInit {
     this.submitted = true;
 
     if (this.orderForm.valid) {
-      console.log(this.orderForm.value)
       this.isLoading = true;
       if (this.orderId) {
         this.orderService.updateOrder(this.orderForm.value).subscribe(() => {
@@ -202,7 +200,7 @@ export class OrderFormComponent implements OnInit {
       } else {
         this.generateOrderId();
         this.generateExpectedCompletionTime();
-        
+
         this.orderService.createOrder(this.orderForm.value).subscribe(() => {
           this.router.navigate(['/orders']);
           this.isLoading = false;
@@ -234,3 +232,4 @@ export class OrderFormComponent implements OnInit {
     });
   }
 }
+

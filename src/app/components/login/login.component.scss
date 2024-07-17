@@ -1,45 +1,55 @@
+$background-color: #f5f5f5;
+$box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+$border-radius: 10px;
+$border-color: #333;
+$black-color: black;
+$white-color: white;
+$hover-color: #333;
+$error-color: rgb(250, 39, 39);
+$center-color: rgb(131, 203, 242);
+
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+
   .login-card {
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
     border-width: 1px;
-    border-color: #333;
+    border-color: $border-color;
     width: 100%;
     max-width: 400px;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .center {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color:rgb(131, 203, 242)
-  }
-  
-  .black-button {
-    margin-top: 10px;
-    background-color: black !important;
-    color: white !important;
-  }
-  
-  .black-button:hover {
-    background-color: #333 !important;
-  }
 
-  .error-message {
-    color: rgb(250, 39, 39);
-    text-align: center;
-    margin-top: 10px;
-    font-size: small;
+    .full-width {
+      width: 100%;
+    }
+
+    .center {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      color: $center-color;
+    }
+
+    .black-button {
+      margin-top: 10px;
+      background-color: $black-color !important;
+      color: $white-color !important;
+
+      &:hover {
+        background-color: $hover-color !important;
+      }
+    }
+
+    .error-message {
+      color: $error-color;
+      text-align: center;
+      margin-top: 10px;
+      font-size: small;
+    }
   }
+}
