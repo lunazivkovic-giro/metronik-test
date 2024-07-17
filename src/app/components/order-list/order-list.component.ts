@@ -35,10 +35,8 @@ export class OrderTableComponent implements OnInit {
 
   editOrder(order: Order): void {
     this.router.navigate(['/order', order.orderId]);
-    console.log('Edit order:', order);
   }
   addNewProduct(): void {
-    console.log('Add new product');
     this.router.navigate(['/order']);
     
   }

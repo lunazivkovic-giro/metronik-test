@@ -29,7 +29,8 @@
               </button>
             </div>
             <mat-divider></mat-divider>
-            <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': isInvalidProductField(product, 'gtin')}">
+            <mat-form-field appearance="fill" class="rounded-input full-width"
+              [ngClass]="{'invalid': isInvalidProductField(product, 'gtin')}">
               <mat-label>GTIN</mat-label>
               <input matInput formControlName="gtin" placeholder="Enter 14-digit GTIN">
               <mat-hint>GTIN must be exactly 14 characters long</mat-hint>
@@ -37,7 +38,8 @@
                 GTIN must be 14 characters long
               </mat-error>
             </mat-form-field>
-            <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': isInvalidProductField(product, 'quantity')}">
+            <mat-form-field appearance="fill" class="rounded-input full-width"
+              [ngClass]="{'invalid': isInvalidProductField(product, 'quantity')}">
               <mat-label>Quantity</mat-label>
               <input matInput formControlName="quantity" placeholder="Enter quantity">
               <mat-hint>Quantity must be a positive integer</mat-hint>
@@ -45,13 +47,18 @@
                 Quantity must be an integer
               </mat-error>
             </mat-form-field>
-            <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': isInvalidProductField(product, 'serialNumberType')}">
+            <mat-form-field appearance="fill" class="rounded-input full-width"
+              [ngClass]="{'invalid': isInvalidProductField(product, 'serialNumberType')}">
               <mat-label>Serial Number Type</mat-label>
-              <input matInput formControlName="serialNumberType" (input)="onInput($event, product)" placeholder="Enter serial number type">
+              <input matInput formControlName="serialNumberType" (input)="onInput($event, product)"
+                placeholder="Enter serial number type">
             </mat-form-field>
-            <div formArrayName="serialNumbers" appUniqueSerialNumbers *ngIf="product.get('serialNumberType')?.value === 'SELF_MADE'">
-              <div *ngFor="let serialNumber of getSerialNumbers(product).controls; let j=index" [formGroupName]="j" class="serial-number-group">
-                <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': isInvalidSerialNumberField(serialNumber, 'serialNumber')}">
+            <div formArrayName="serialNumbers" appUniqueSerialNumbers
+              *ngIf="product.get('serialNumberType')?.value === 'SELF_MADE'">
+              <div *ngFor="let serialNumber of getSerialNumbers(product).controls; let j=index" [formGroupName]="j"
+                class="serial-number-group">
+                <mat-form-field appearance="fill" class="rounded-input full-width"
+                  [ngClass]="{'invalid': isInvalidSerialNumberField(serialNumber, 'serialNumber')}">
                   <mat-label>Serial Number {{j + 1}}</mat-label>
                   <input matInput formControlName="serialNumber" placeholder="Enter serial number">
                   <mat-hint>Serial number is required</mat-hint>
@@ -61,13 +68,15 @@
                 </button>
               </div>
               <div class="button-group-left">
-                <button mat-stroked-button color="primary" (click)="addSerialNumber(i)" type="button">Add Serial Number</button>
+                <button mat-stroked-button color="primary" (click)="addSerialNumber(i)" type="button">Add Serial
+                  Number</button>
               </div>
               <div *ngIf="getSerialNumbers(product).errors?.['nonUniqueSerialNumbers']" class="error-message">
                 Serial numbers must be unique.
               </div>
             </div>
-            <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': isInvalidProductField(product, 'templateId')}">
+            <mat-form-field appearance="fill" class="rounded-input full-width"
+              [ngClass]="{'invalid': isInvalidProductField(product, 'templateId')}">
               <mat-label>Template ID</mat-label>
               <input matInput formControlName="templateId" placeholder="Enter template ID">
             </mat-form-field>
@@ -81,10 +90,12 @@
             </button>
           </div>
           <mat-divider></mat-divider>
-          <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': orderForm.get('orderDetails.factoryId')?.invalid && (orderForm.get('orderDetails.factoryId')?.touched || submitted)}">
+          <mat-form-field appearance="fill" class="rounded-input full-width"
+            [ngClass]="{'invalid': orderForm.get('orderDetails.factoryId')?.invalid && (orderForm.get('orderDetails.factoryId')?.touched || submitted)}">
             <mat-label>Factory ID</mat-label>
             <input matInput formControlName="factoryId" placeholder="Enter factory ID">
-            <mat-error *ngIf="orderForm.get('orderDetails.factoryId')?.invalid && (orderForm.get('orderDetails.factoryId')?.touched || submitted)">
+            <mat-error
+              *ngIf="orderForm.get('orderDetails.factoryId')?.invalid && (orderForm.get('orderDetails.factoryId')?.touched || submitted)">
               Factory ID is required
             </mat-error>
           </mat-form-field>
@@ -96,31 +107,39 @@
             <mat-label>Factory Address</mat-label>
             <input matInput formControlName="factoryAddress" placeholder="Enter factory address">
           </mat-form-field>
-          <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': orderForm.get('orderDetails.factoryCountry')?.invalid && (orderForm.get('orderDetails.factoryCountry')?.touched || submitted)}">
+          <mat-form-field appearance="fill" class="rounded-input full-width"
+            [ngClass]="{'invalid': orderForm.get('orderDetails.factoryCountry')?.invalid && (orderForm.get('orderDetails.factoryCountry')?.touched || submitted)}">
             <mat-label>Factory Country</mat-label>
             <input matInput formControlName="factoryCountry" placeholder="Enter factory country">
-            <mat-error *ngIf="orderForm.get('orderDetails.factoryCountry')?.invalid && (orderForm.get('orderDetails.factoryCountry')?.touched || submitted)">
+            <mat-error
+              *ngIf="orderForm.get('orderDetails.factoryCountry')?.invalid && (orderForm.get('orderDetails.factoryCountry')?.touched || submitted)">
               Factory Country is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': orderForm.get('orderDetails.productionLineId')?.invalid && (orderForm.get('orderDetails.productionLineId')?.touched || submitted)}">
+          <mat-form-field appearance="fill" class="rounded-input full-width"
+            [ngClass]="{'invalid': orderForm.get('orderDetails.productionLineId')?.invalid && (orderForm.get('orderDetails.productionLineId')?.touched || submitted)}">
             <mat-label>Production Line ID</mat-label>
             <input matInput formControlName="productionLineId" placeholder="Enter production line ID">
-            <mat-error *ngIf="orderForm.get('orderDetails.productionLineId')?.invalid && (orderForm.get('orderDetails.productionLineId')?.touched || submitted)">
+            <mat-error
+              *ngIf="orderForm.get('orderDetails.productionLineId')?.invalid && (orderForm.get('orderDetails.productionLineId')?.touched || submitted)">
               Production Line ID is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': orderForm.get('orderDetails.productCode')?.invalid && (orderForm.get('orderDetails.productCode')?.touched || submitted)}">
+          <mat-form-field appearance="fill" class="rounded-input full-width"
+            [ngClass]="{'invalid': orderForm.get('orderDetails.productCode')?.invalid && (orderForm.get('orderDetails.productCode')?.touched || submitted)}">
             <mat-label>Product Code</mat-label>
             <input matInput formControlName="productCode" placeholder="Enter product code">
-            <mat-error *ngIf="orderForm.get('orderDetails.productCode')?.invalid && (orderForm.get('orderDetails.productCode')?.touched || submitted)">
+            <mat-error
+              *ngIf="orderForm.get('orderDetails.productCode')?.invalid && (orderForm.get('orderDetails.productCode')?.touched || submitted)">
               Product Code is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field appearance="fill" class="rounded-input full-width" [ngClass]="{'invalid': orderForm.get('orderDetails.productDescription')?.invalid && (orderForm.get('orderDetails.productDescription')?.touched || submitted)}">
+          <mat-form-field appearance="fill" class="rounded-input full-width"
+            [ngClass]="{'invalid': orderForm.get('orderDetails.productDescription')?.invalid && (orderForm.get('orderDetails.productDescription')?.touched || submitted)}">
             <mat-label>Product Description</mat-label>
             <input matInput formControlName="productDescription" placeholder="Enter product description">
-            <mat-error *ngIf="orderForm.get('orderDetails.productDescription')?.invalid && (orderForm.get('orderDetails.productDescription')?.touched || submitted)">
+            <mat-error
+              *ngIf="orderForm.get('orderDetails.productDescription')?.invalid && (orderForm.get('orderDetails.productDescription')?.touched || submitted)">
               Product Description is required
             </mat-error>
           </mat-form-field>
@@ -136,7 +155,8 @@
 
         <div class="button-group-left">
           <button mat-stroked-button color="primary" (click)="addProduct()" type="button">Add Product</button>
-          <button mat-stroked-button color="accent" *ngIf="!showOrderDetails" (click)="toggleOrderDetails()" type="button">Add Order Details</button>
+          <button mat-stroked-button color="accent" *ngIf="!showOrderDetails" (click)="toggleOrderDetails()"
+            type="button">Add Order Details</button>
         </div>
         <div class="button-group">
           <button mat-raised-button color="primary" type="submit" class="save-button">Save</button>

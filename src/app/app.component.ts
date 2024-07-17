@@ -18,7 +18,9 @@ export class AppComponent {
     });
   }
 
-  isAuthenticated(): boolean {
-    return this.authService.isAuthenticated();
-  }
+
 }
+
+/*this.router.events.subscribe(event => { ... }): Subscribes to router events to listen for navigation changes.
+if (event instanceof NavigationEnd): Checks if the event is a NavigationEnd event, which signals that the router has successfully completed a navigation.
+this.currentRoute = event.url: Updates the currentRoute property with the current URL.*/

@@ -4,6 +4,7 @@ import { isPlatformBrowser } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   private isLoggedIn = false;
   private hardcodedEmail: string = 'admin@example.com';
@@ -44,3 +45,9 @@ export class AuthService {
     return btoa(`${username}:${password}`);
   }
 }
+
+
+/*constructor(@Inject(PLATFORM_ID) private platformId: Object): Injects the PLATFORM_ID token to determine the current platform (browser or server).
+isPlatformBrowser(this.platformId): Checks if the code is running in the browser. This is useful in Angular Universal (server-side rendering) to conditionally execute browser-specific code.
+: A JavaScript function that encodes a string in base64 format.
+*/

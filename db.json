@@ -10,9 +10,15 @@
           "quantity": 3,
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [
-            "XT6c84e",
-            "2kY39Om",
-            "X4ebssJ"
+            {
+              "serialNumber": "XT6c84e"
+            },
+            {
+              "serialNumber": "2kY39Om"
+            },
+            {
+              "serialNumber": "X4ebssJ"
+            }
           ],
           "templateId": "3"
         }
@@ -34,6 +40,7 @@
           "gtin": "02334567894340",
           "quantity": 5,
           "serialNumberType": "SYSTEM_GENERATED",
+          "serialNumbers": [],
           "templateId": "4"
         }
       ],
@@ -55,8 +62,12 @@
           "quantity": 2,
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [
-            "12345",
-            "67890"
+            {
+              "serialNumber": "12345"
+            },
+            {
+              "serialNumber": "67890"
+            }
           ],
           "templateId": "5"
         }
@@ -79,8 +90,12 @@
           "quantity": 4,
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [
-            "ABCDE",
-            "FGHIJ"
+            {
+              "serialNumber": "ABCDE"
+            },
+            {
+              "serialNumber": "FGHIJ"
+            }
           ],
           "templateId": "6"
         }
@@ -102,6 +117,7 @@
           "gtin": "05334567894343",
           "quantity": 6,
           "serialNumberType": "SYSTEM_GENERATED",
+          "serialNumbers": [],
           "templateId": "7"
         }
       ],
@@ -123,8 +139,12 @@
           "quantity": 3,
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [
-            "LMNOP",
-            "QRSTU"
+            {
+              "serialNumber": "LMNOP"
+            },
+            {
+              "serialNumber": "QRSTU"
+            }
           ],
           "templateId": "8"
         }
@@ -146,6 +166,7 @@
           "gtin": "07334567894345",
           "quantity": 5,
           "serialNumberType": "SYSTEM_GENERATED",
+          "serialNumbers": [],
           "templateId": "9"
         }
       ],
@@ -167,8 +188,12 @@
           "quantity": 2,
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [
-            "VWXYZ",
-            "12345"
+            {
+              "serialNumber": "VWXYZ"
+            },
+            {
+              "serialNumber": "12345"
+            }
           ],
           "templateId": "10"
         }
@@ -182,30 +207,6 @@
       }
     },
     {
-      "omsId": "0645856",
-      "expectedCompletionTime": "2024-07-15T18:00:00Z",
-      "orderId": "c7e3d6a5-f4a2-48e8-b2d6-7a9b8d8e7e8f",
-      "products": [
-        {
-          "gtin": "09334567894347",
-          "quantity": 4,
-          "serialNumberType": "SELF_MADE",
-          "serialNumbers": [
-            "67890",
-            "ABCDE"
-          ],
-          "templateId": "11"
-        }
-      ],
-      "orderDetails": {
-        "factoryId": "345678",
-        "factoryCountry": "Country I",
-        "productionLineId": "Line9",
-        "productCode": "PCODE9",
-        "productDescription": "Product Description 9"
-      }
-    },
-    {
       "omsId": "0645857",
       "expectedCompletionTime": "2024-07-16T19:00:00Z",
       "orderId": "d6a3b8c2-f6b7-48e8-a3a8-8a9b8d9e8e9f",
@@ -214,6 +215,7 @@
           "gtin": "10334567894348",
           "quantity": 6,
           "serialNumberType": "SYSTEM_GENERATED",
+          "serialNumbers": [],
           "templateId": "12"
         }
       ],
@@ -262,7 +264,7 @@
       "id": "",
       "orderId": "4c130751-0404-4548-9fb3-1b0cf9eda266",
       "expectedCompletionTime": 8307,
-      "omsId": "123",
+      "omsId": "123456789",
       "orderDetails": {
         "factoryId": "",
         "factoryName": "",
@@ -276,7 +278,7 @@
       },
       "products": [
         {
-          "gtin": "12345678912345",
+          "gtin": "12345678912346",
           "quantity": "34",
           "serialNumberType": "SELF_MADE",
           "serialNumbers": [

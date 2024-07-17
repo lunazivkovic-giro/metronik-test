@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'order', component: OrderFormComponent, canActivate: [AuthGuard] }, 
   { path: 'order/:id', component: OrderFormComponent, canActivate: [AuthGuard] }, 
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '/orders', pathMatch: 'full' } // Wildcard route for non-existent paths
+  { path: '**', redirectTo: '/orders', pathMatch: 'full' } 
 ];
 
 @NgModule({
