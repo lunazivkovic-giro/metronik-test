@@ -78,6 +78,10 @@ export class OrderFormComponent implements OnInit {
       }
     });
     this.setProducts(order.products);
+    if(order.orderDetails.factoryId){
+
+      this.toggleOrderDetails()
+    }
   }
 
   setProducts(products: any[]) {
